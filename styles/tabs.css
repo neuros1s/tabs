@@ -1,0 +1,66 @@
+/*
+    If is needed support for IE, Edge 12 - 15 and mobile browsers
+    instead of use variables, use values directly in the properties
+ */
+
+:root {
+    --tab-link-text-color: #333;
+    --tab-link-active-border-color: #333;
+    --tab-link-hover-background-color: #eee;
+    --border-radius: 2px;
+    --border-color: #ccc;
+    --outer-shadow: 0 0 1px rgba(0, 0, 0, .3);
+}
+
+.c-tabs {
+    border-radius: var(--border-radius);
+    border: 1px solid var(--border-color);
+    box-shadow: var(--outer-shadow);
+}
+
+.c-tabs__tab {
+    display: none;
+}
+
+.c-tabs__tab-link {
+    border-bottom: 2px solid var(--border-color);
+    color: var(--tab-link-text-color);
+    display: inline-block;
+    font-weight: bold;
+    padding: 20px 0;
+    text-align: center;
+    text-decoration: none;
+    width: 25%; /* tab button size */
+}
+
+.c-tabs__tab-link:active,
+.c-tabs__tab-link:focus,
+.c-tabs__tab-link:hover {
+    background-color: var(--tab-link-hover-background-color);
+}
+
+.c-tabs__tab-content {
+    display: none;
+    width: 100%;
+    padding: 20px;
+}
+
+/* Select first item by default on first time page load */
+.c-tabs__tab:nth-of-type(1):not(:target) ~ .c-tabs__tab:nth-of-type(2):not(:target) ~ .c-tabs__tab:nth-of-type(3):not(:target) ~ .c-tabs__tab:nth-of-type(4):not(:target) ~ .c-tabs__tab-links a:nth-of-type(1),
+/* Active the clicked item */
+.c-tabs__tab:nth-of-type(1):target ~ .c-tabs__tab:nth-of-type(2):not(:target) ~ .c-tabs__tab:nth-of-type(3):not(:target) ~ .c-tabs__tab:nth-of-type(4):not(:target) ~ .c-tabs__tab-links a:nth-of-type(1),
+.c-tabs__tab:nth-of-type(1):not(:target) ~ .c-tabs__tab:nth-of-type(2):target ~ .c-tabs__tab:nth-of-type(3):not(:target) ~ .c-tabs__tab:nth-of-type(4):not(:target) ~ .c-tabs__tab-links a:nth-of-type(2),
+.c-tabs__tab:nth-of-type(1):not(:target) ~ .c-tabs__tab:nth-of-type(2):not(:target) ~ .c-tabs__tab:nth-of-type(3):target ~ .c-tabs__tab:nth-of-type(4):not(:target) ~ .c-tabs__tab-links a:nth-of-type(3),
+.c-tabs__tab:nth-of-type(1):not(:target) ~ .c-tabs__tab:nth-of-type(2):not(:target) ~ .c-tabs__tab:nth-of-type(3):not(:target) ~ .c-tabs__tab:nth-of-type(4):target ~ .c-tabs__tab-links a:nth-of-type(4) {
+    border-bottom:2px solid var(--tab-link-active-border-color);
+}
+
+/* Show the first tab by default on first time page load */
+.c-tabs__tab:nth-of-type(1):not(:target) ~ .c-tabs__tab:nth-of-type(2):not(:target) ~ .c-tabs__tab:nth-of-type(3):not(:target) ~ .c-tabs__tab:nth-of-type(4):not(:target) ~ .c-tabs__tab-content:nth-of-type(1),
+/* Show the tab in accord to the clicked item */
+.c-tabs__tab:nth-of-type(1):target ~ .c-tabs__tab-content:nth-of-type(1),
+.c-tabs__tab:nth-of-type(2):target ~ .c-tabs__tab-content:nth-of-type(2),
+.c-tabs__tab:nth-of-type(3):target ~ .c-tabs__tab-content:nth-of-type(3),
+.c-tabs__tab:nth-of-type(4):target ~ .c-tabs__tab-content:nth-of-type(4) {
+    display:block;
+}

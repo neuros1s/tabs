@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link href="styles/base.css" rel="stylesheet" type="text/css">
+        <link href="styles/tabs.css" rel="stylesheet" type="text/css">
+        <link href="styles/utils.css" rel="stylesheet" type="text/css">
+
+        <title>Tabs</title>
+    </head>
+    <body>
+    <article class="c-tabs">
+
+        <!-- respect this structure of tabs to let CSS does his job -->
+
+        <!-- we need the id for link target-->
+        <span id="cat" class="c-tabs__tab"></span>
+        <span id="breeds" class="c-tabs__tab"></span>
+        <span id="behaviour" class="c-tabs__tab"></span>
+        <span id="genetics" class="c-tabs__tab"></span>
+
+        <nav class="c-tabs__tab-links">
+            <a href="#cat" class="c-tabs__tab-link">Cat
+            </a><a href="#breeds" class="c-tabs__tab-link">Breeds
+            </a><a href="#behaviour" class="c-tabs__tab-link">Behaviour
+            </a><a href="#genetics" class="c-tabs__tab-link">Genetics
+            </a>
+        </nav>
+
+        <section class="c-tabs__tab-content">
+            <h1>Cat</h1>
+            <p>The domestic cat is a small, typically furry, carnivorous mammal. They are often called house cats when kept as indoor pets or simply cats when there is no need to distinguish them from other felids and felines. Cats are often valued by humans for companionship and for their ability to hunt vermin. There are more than 70 cat breeds, though different associations proclaim different numbers according to their standards.</p>
+        </section>
+        <section class="c-tabs__tab-content">
+            <ul>
+                <li>Ocicat</li>
+                <li>Bombay ragdoll</li>
+                <li>Cougar bengal</li>
+            </ul>
+        </section>
+        <section class="c-tabs__tab-content">
+            <p>Outdoor cats are active both day and night, although they tend to be slightly more active at night. The timing of cats' activity is quite flexible and varied, which means house cats may be more active in the morning and evening, as a response to greater human activity at these times. Although they spend the majority of their time in the vicinity of their home, housecats can range many hundreds of meters from this central point, and are known to establish territories that vary considerably in size, in one study ranging from 7 to 28 hectares.</p>
+        </section>
+        <section class="c-tabs__tab-content">
+            <p>The domesticated cat and its closest wild ancestor are both diploid organisms that possess 38 chromosomes and roughly 20,000 genes. About 250 heritable genetic disorders have been identified in cats, many similar to human inborn errors. The high level of similarity among the metabolism of mammals allows many of these feline diseases to be diagnosed using genetic tests that were originally developed for use in humans, as well as the use of cats as animal models in the study of the human diseases.</p>
+        </section>
+    </article>
+    <p class="u-text--right">Text resource: <a href="https://en.wikipedia.org/wiki/Cat" target="_blank">https://en.wikipedia.org/wiki/Cat</a></p>
+    </body>
+</html>
